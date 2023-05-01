@@ -91,19 +91,19 @@
         </div>
         <div class="row">
           <div class="col-md-6">
-            <form id="request" class="main_form">
+            <form id="request" class="main_form" method="POST" action="{% url 'contact_view' %}">
               <div class="row">
                 <div class="col-md-12 ">
-                  <input class="contactus" placeholder="Nombre" type="type" name="Name"> 
+                  <input class="contactus" placeholder="Nombre" type="text" name="Name"> 
                 </div>
                 <div class="col-md-12">
-                  <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                  <input class="contactus" placeholder="Email" type="email" name="Email"> 
                 </div>
                 <div class="col-md-12">
-                  <input class="contactus" placeholder="Número de teléfono" type="type" name="Phone Number">                          
+                  <input class="contactus" placeholder="Número de teléfono" type="tel" name="Phone_Number">                          
                 </div>
                 <div class="col-md-12">
-                  <textarea class="textarea" placeholder="Mensaje" type="type" Message="Mensaje"></textarea>
+                  <textarea class="textarea" placeholder="Mensaje" name="Message"></textarea>
                 </div><br>
                            <div class="col-md-12">
                             <button class="btn btn-send">Enviar</button><br><br><br><br>
@@ -111,6 +111,7 @@
                         </div>
                      </form>
                   </div>
+                  
                   <div class="col-md-6">
                      <div class="map_main">
                         <div class="map-responsive">

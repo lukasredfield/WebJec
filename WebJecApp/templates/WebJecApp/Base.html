@@ -47,7 +47,7 @@
               <a class="nav-link active" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Home' %}">&nbsp;&nbsp;Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Nosotros' %}">&nbsp;&nbsp;Ministerios</a>
+              <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Ministerios' %}">&nbsp;&nbsp;Ministerios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Contacto' %}">&nbsp;&nbsp;Contacto</a>
@@ -71,16 +71,38 @@
         {% endblock %}
 
      
-                <div class="footer-bottom">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>&copy; Comunidad Web Jec 2022-2023. DIOS TE BENDIGA!</p>
-                        </div>
-                    </div>
+        <footer>
+            <div class="container-fluid bg-light"" style="padding-top: 40px;">
+              <div class="row">
+                <div class="col-md-6 bg-light">
+                  <h2>Contáctanos</h2>
+                  <ul class="list-unstyled" style="padding-bottom: 50px;">
+                    <li><i class="fa fa-map-marker-alt"></i> Buenos Aires, Argentina</li>
+                    <li><i class="fa fa-phone"></i> +1 123 456789</li>
+                    <li><i class="fa fa-envelope"></i> comunidadwebjec@gmail.com</li>
+                  </ul>
                 </div>
+                <div class="col-md-6 bg-light">
+                  <h2>Síguenos</h2>
+                  <ul class="social-network social-circle list-inline" style="padding-bottom: 20px;">
+                    <li class="list-inline-item"><a href="https://www.instagram.com/iglesiajec/" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/comunidadwebjec" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.youtube.com/@ComunidadJec" class="icoYoutube" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-    
-    </div>
+            <div class="container-fluid" class="padding-top: 50px;">
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="text-center">&copy; Comunidad Web Jec 2022-2023. DIOS TE BENDIGA!</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+          
+
 
 
 </body>
