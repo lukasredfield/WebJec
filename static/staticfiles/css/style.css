@@ -20,7 +20,6 @@
 @import url(icomoon.css);
 @import url(font-awesome.min.css);
 @import url(meanmenu.css);
-@import url(owl.carousel.min.css);
 @import url(swiper.min.css);
 @import url(slick.css);
 @import url(jquery.fancybox.min.css);
@@ -155,14 +154,101 @@ a,
      transition: all .3s ease-in-out;
 }
 
-img {
-     max-width: 100%;
-     height: auto;
+.item img {
+     object-fit: cover;
+     width: 100%;
+     height: 100%;
+   }
+
+.full-screen {
+     margin-bottom: -50px; /* Ajusta este valor según sea necesario */
+   }
+   
+
+#banner2 {
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.9s ease-in-out;
+    /*background-image: linear-gradient(to top, rgba(46, 49, 65, 0), rgba(46, 49, 65, 1)), url(../images/07.jpg);*/
+    /*background-image: url(../images/07.jpg);*/
+    background-size: auto, cover;
+    background-attachment: fixed;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    padding: 3em 0 4.75em 0 ;
+    min-height: auto; /* Altura flexible */
+    color: #ffffff;
 }
+
+#banner a {
+	color: #ffffff;
+}
+
+.color-white {
+	color: white;
+}
+
+.btn-banner {
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	font-family: 'Istok Web', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	border-radius: 50px;
+    padding: 18px 43px;
+}
+
+.ml-auto a i {
+     font-size: 1.5em;
+   }
+   
+
+img {
+     max-width: 100% !important;
+     height: auto !important;
+   }
+   
 
  :focus {
      outline: 0;
 }
+
+.carousel-inner {
+     width: 100%;
+     max-height: 500px; /* ajusta la altura máxima según tus necesidades */
+   }
+   
+.carousel-item {
+     height: 100%;
+   }
+
+.carousel-item img {
+     height: 120%;
+   }
+   
+.btn-send {
+     background-color: rgb(231, 230, 230);
+     border: none;
+     color: rgb(74, 72, 235);
+     padding: 10px 20px;
+     font-size: 16px;
+     border-radius: 30px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+   
+.btn-send:hover {
+     background-color: #bbb;
+   }
+    
 
 .btn-custom {
      margin-top: 20px;
@@ -253,8 +339,16 @@ button {
 /*--------------------------------------------------------------------- top banner area ---------------------------------------------------------------------*/
 
 
-/*-- navigation--*/
+.nav-link {
+     padding-right: 10px;
+   }
+   
 
+.navbar {
+     padding-top: 2%;
+     padding-bottom: 2%;
+   }
+   
 .navigation.navbar {
      float: right;
      padding-top: 14px !important;
@@ -304,16 +398,6 @@ button {
      position: relative;
 }
 
-.banner .carousel-indicators li {
-     width: 20px;
-     height: 20px;
-     border-radius: 30px;
-     background: #000;
-}
-
-.banner .carousel-indicators .active {
-     background-color: #fe0000;
-}
 
 .booking_ocline {
      position: absolute;
@@ -385,16 +469,6 @@ button {
      transition: ease-in 0.5s;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-     display: none;
-}
-
-.carousel-indicators {
-     right: inherit;
-     bottom: 53px;
-     margin-left: 9%;
-}
 
 
 /** end banner section **/
