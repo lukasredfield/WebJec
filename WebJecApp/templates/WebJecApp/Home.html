@@ -1,0 +1,127 @@
+{% extends "WebJecApp/Base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <section class="page-section clearfix" id="banner2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/banner2.jpg' %}" alt="foto">
+                </div>
+            </div>
+    </section><br><br>
+    
+    <section id="one">
+      <div class="container">
+        <div class="one-features">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="section-highlight">
+                <h2>Una comunidad de fe</h2>
+              </div>
+              <div class="section-details">
+                <p>
+                  Creemos que la iglesia no es un lugar físico sino un conjunto de individuos que celebran la muerte y resurrección de nuestro Señor Jesucristo todos los días de su vida. Te invitamos a que puedas celebrar con nosotros las buenas noticias de Dios!
+                </p><br><br>
+                <a href="#" class="btn btn-learn-more">Leer más <i class="ion-ios-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div >
+                <img src="{% static 'img/logo2.jpg' %}" alt="Responsive image" class="img-fluid rounded-circle">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="slide1">
+        <img class="d-block w-100" src="{% static 'img/15.jpg' %}" alt="First slide">
+      </div>
+      <div class="carousel-item" id="slide2">
+        <img class="d-block w-100" src="{% static 'img/1.jpg' %}" alt="Second slide">
+      </div>
+      <div class="carousel-item" id="slide2">
+        <img class="d-block w-100" src="{% static 'img/6.jpg' %}" alt="Second slide">
+      </div>
+      <div class="carousel-item" id="slide3">
+        <img class="d-block w-100" src="{% static 'img/4.jpg' %}" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  <script>
+    $(document).ready(function () {
+      $('#myCarousel').carousel({
+        interval: 5000, // tiempo de transición en milisegundos
+        keyboard: true, // permitir el control con las flechas del teclado
+        pause: 'hover', // pausa la transición al pasar el mouse por encima
+        wrap: true // permite continuar en bucle al llegar al final
+      });
+    });
+  </script>
+
+
+    <div class="contact" style="position: relative; z-index: 1;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="m-0 text-primary" style="font-size: 40px;">
+              <h2>Contactanos</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <form id="request" class="main_form">
+              <div class="row">
+                <div class="col-md-12 ">
+                  <input class="contactus" placeholder="Nombre" type="type" name="Name"> 
+                </div>
+                <div class="col-md-12">
+                  <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                </div>
+                <div class="col-md-12">
+                  <input class="contactus" placeholder="Número de teléfono" type="type" name="Phone Number">                          
+                </div>
+                <div class="col-md-12">
+                  <textarea class="textarea" placeholder="Mensaje" type="type" Message="Mensaje"></textarea>
+                </div><br>
+                           <div class="col-md-12">
+                            <button class="btn btn-send">Enviar</button><br><br><br><br>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="map_main">
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.680804577729!2d-58.28327068499303!3d-34.78881008041197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32be59de2edc9%3A0x16580b6e512260ec!2sSantiago%20Derqui%201285%2C%20B1887%20Gerli%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1664252852420!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+  
+         
+
+         {% endblock %}                
