@@ -154,11 +154,11 @@ a,
      transition: all .3s ease-in-out;
 }
 
-.item img {
-     object-fit: cover;
-     width: 100%;
-     height: 100%;
+.img-fluid {
+     max-width: 100%;
+     height: auto;
    }
+   
 
 .full-screen {
      margin-bottom: -50px; /* Ajusta este valor según sea necesario */
@@ -214,6 +214,10 @@ a,
 img {
      max-width: 100% !important;
      height: auto !important;
+   }
+
+.section-details img {
+     transform: scale(1.2);
    }
    
 
