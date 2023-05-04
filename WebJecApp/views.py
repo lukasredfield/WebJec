@@ -45,7 +45,7 @@ def contact_view(request):
         # Construir el correo electrónico
         subject = f"Nuevo mensaje de {name}"
         body = f"Nombre: {name}\nEmail: {email}\nTeléfono: {phone_number}\nMensaje: {message}"
-        from_email = 'tu_email@gmail.com'
+        from_email = 'lukasredfield01@gmail.com'
         to_email = ['lukasredfield@gmail.com']
 
         # Enviar el correo electrónico
