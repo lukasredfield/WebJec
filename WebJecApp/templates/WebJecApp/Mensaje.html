@@ -1,0 +1,23 @@
+{% extends "WebJecApp/Base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="alert-message" style="position:relative; background-image:url('{% static 'img/1.jpg' %}');">
+    <div class="overlay"></div>
+    <br><br><br><br>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert" style="color: rgb(156, 84, 16);">
+          <strong>¡Mensaje enviado!</strong> Nos contactaremos a la brevedad. "Pidan, y se les dará; busquen, y encontrarán; llamen, y se les abrirá. Porque todo el que pide, recibe; el que busca, encuentra; y al que llama, se le abrirá. (Mateo 7:7-8)"
+        </div>
+      {% endfor %}
+    {% endif %}
+    <div class="button-container">
+      <button class="btn btn-send2">Volver a la página principal</button>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  
+{% endblock %}
+

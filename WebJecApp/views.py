@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage
 from django.contrib import messages
 
@@ -24,9 +24,9 @@ def contacto(request):
 
     return render(request, 'WebJecApp/Contacto.html')
 
-def comunidad(request):
+def mensaje(request):
 
-    return render(request, 'WebJecApp/Comunidad.html')
+    return render(request, 'WebJecApp/Mensaje.html')
 
 def index(request):
 
@@ -52,10 +52,10 @@ def contact_view(request):
         email = EmailMessage(subject, body, from_email, to_email)
         email.send()
         messages.success(request, '¡Mensaje enviado, nos contactaremos a la brevedad! "Pidan, y se les dará; busquen, y encontrarán; llamen, y se les abrirá. 8 Porque todo el que pide, recibe; el que busca, encuentra; y al que llama, se le abre.  (Mateo 7:7-8)"')
-
+    
+    return render(request, 'WebJecApp/Mensaje.html')
         
 
     # Renderizar la plantilla del formulario de contacto
-    return render(request, 'WebJecApp/Home.html')
-
+    #return render(request, 'WebJecApp/Home.html')
 

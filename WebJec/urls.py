@@ -22,11 +22,11 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="Home"),
-    path('comunidad', views.comunidad, name="Comunidad"),
     path('ministerios', views.ministerios, name="Ministerios"),
     path('mision', views.mision, name="Mision"),
     path('contacto', views.contacto, name="Contacto"),
     path('index', views.index, name="Index"),
     path('contact/', views.contact_view, name='contact_view'),
+    path('mensaje/', views.mensaje, name='mensaje'),
 ]
 
