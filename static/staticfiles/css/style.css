@@ -154,11 +154,11 @@ a,
      transition: all .3s ease-in-out;
 }
 
-.item img {
-     object-fit: cover;
-     width: 100%;
-     height: 100%;
+.img-fluid {
+     max-width: 100%;
+     height: auto;
    }
+   
 
 .full-screen {
      margin-bottom: -50px; /* Ajusta este valor según sea necesario */
@@ -177,7 +177,7 @@ a,
     background-attachment: fixed;
     background-position: center, center;
     background-repeat: no-repeat;
-    padding: 3em 0 4.75em 0 ;
+    padding: 5em 0 4.75em 0 ;
     min-height: auto; /* Altura flexible */
     color: #ffffff;
 }
@@ -215,24 +215,88 @@ img {
      max-width: 100% !important;
      height: auto !important;
    }
+
+.section-details img {
+     transform: scale(1.2);
+   }
    
 
  :focus {
      outline: 0;
 }
 
-.carousel-inner {
-     width: 100%;
-     max-height: 500px; /* ajusta la altura máxima según tus necesidades */
+
+.carousel {
+     height: 90%;
    }
    
-.carousel-item {
+   .carousel-inner {
+     max-height: 100%;
+   }
+   
+   .carousel-item {
      height: 100%;
    }
-
-.carousel-item img {
-     height: 120%;
+   
+   .carousel-item img {
+     height: 100%;
    }
+   
+
+   .contact {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     z-index: 1;
+   }
+
+   .alert {
+     background-color: #eee48dce; /* cambia el color aquí */
+     color: black;
+     text-align: center;
+     padding: 20px;
+     border-radius: 5px;
+     margin: 20px auto;
+     max-width: 600px;
+ }
+ 
+ .alert-message {
+     position: relative;
+     background-size: cover;
+     background-position: center;
+     height: 500px;
+ }
+
+ .button-container {
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+   }
+   
+
+ .overlay {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(255, 255, 255, 0.603);
+ }
+
+ .btn-send2 {
+     background-color: rgb(231, 230, 230);
+     border: none;
+     color: rgb(11, 11, 51);
+     padding: 10px 20px;
+     font-size: 16px;
+     border-radius: 30px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+
    
 .btn-send {
      background-color: rgb(231, 230, 230);
@@ -244,6 +308,8 @@ img {
      cursor: pointer;
      transition: background-color 0.3s ease;
    }
+
+
    
 .btn-send:hover {
      background-color: #bbb;
@@ -278,6 +344,37 @@ img {
 .badge {
      font-weight: 500;
 }
+
+footer {
+     padding-top: 40px;
+     padding-bottom: 40px;
+   }
+
+.form-map-row {
+     display: flex;
+     align-items: stretch;
+}
+   
+.form-map-row iframe,
+.form-map-row button {
+     max-height: 100%;
+}
+   
+.map-responsive {
+     position: relative;
+     padding-bottom: 56.25%;
+     height: 0;
+     overflow: hidden;
+}
+   
+.map-responsive iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
+
 
 blockquote {
      margin: 20px 0 20px;
