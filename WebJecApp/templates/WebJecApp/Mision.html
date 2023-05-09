@@ -77,13 +77,14 @@
   
 }
 
-  </style>
+</style>
   <script>
     var video = document.querySelector('.video-container video');
     video.addEventListener('loadeddata', function() {
       video.classList.add('loaded');
     });
   </script>
+  
 <div>
  <div style="position:relative; background-image:url('{% static 'img/1.jpg' %}');"></div>
   <div class="container">
@@ -92,7 +93,7 @@
       <div class="col-md-4">
         <div class="container px-5">
         <img src="{% static 'img/plateados1.png' %}" style="border-radius: 55%" alt="Responsive image">
-      </div>
+      </div><br><br>
     </div>
       <div class="col-md-8">
         <div class="section-details">
