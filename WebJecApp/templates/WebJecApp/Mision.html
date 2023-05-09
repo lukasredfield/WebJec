@@ -31,6 +31,7 @@
     height: calc(100% + 50px); /* Ajusta la altura del video */
     object-fit: cover;
     
+    
   }
   
 .video-container .overlay2 {
@@ -41,6 +42,7 @@
   height: 100%;
   background-color: rgba(250, 249, 249, 0.137);
   z-index: 1; /* Asegurarse de que la capa del overlay esté sobre el video */
+  
 }
 
 .text-overlay {
@@ -63,12 +65,16 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    opacity: 0; /* Oculta el video al principio */
+    transition: opacity 0.5s ease-in-out; /* Agrega una transición de 0.5 segundos */
+    
   }
 }
 
 /* Muestra el video gradualmente cuando se carga la página */
 .video-container video.loaded {
   opacity: 1;
+  
 }
 
   </style>
