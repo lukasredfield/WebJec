@@ -10,33 +10,27 @@
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="object-fit: cover;">
         <source src="{% static 'img/VIDEO ANIVERSARIO.mp4' %}" type="video/mp4">
     </video>
-    <div class="overlay2"></div>
-    <div class="text-overlay">Jesús es el camino</div>
   </div>
 </header>
-
-</header>
-
 <style>
-/* Show the video in any screen size */
-.video-container {
-  position: relative;
-  height: calc(130vh - 55px); /* ajusta la altura del video */
-  overflow: hidden;
-}
-
-.video-container video {
-  display: block;
-  position: absolute;
-  top: -50px; /* Ajusta la posición vertical del video */
-  left: 0;
-  width: 100%;
-  height: calc(100% + 50px); /* Ajusta la altura del video */
-  object-fit: cover;
-  opacity: 0; /* Oculta el video al principio */
-  transition: opacity 0.5s ease-in-out; /* Agrega una transición de 0.5 segundos */
-}
-
+  /* Show the video in any screen size */
+  .video-container {
+    position: relative;
+    height: calc(130vh - 55px); /* ajusta la altura del video */
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    display: block;
+    position: absolute;
+    top: -50px; /* Ajusta la posición vertical del video */
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50px); /* Ajusta la altura del video */
+    object-fit: cover;
+    
+  }
+  
 .video-container .overlay2 {
   position: absolute;
   top: 0;
@@ -55,7 +49,6 @@
   font-size: 16px;
 }
 
-
 /* Change video size for smaller screens */
 @media only screen and (max-width: 768px) {
   .video-container {
@@ -70,20 +63,8 @@
     transform: translateY(-50%);
   }
 }
-
-/* Muestra el video gradualmente cuando se carga la página */
-.video-container video.loaded {
-  opacity: 1;
-}
- 
-</style>
-<script>
-  var video = document.querySelector('.video-container video');
-  video.addEventListener('loadeddata', function() {
-    video.classList.add('loaded');
-  });
-</script>
-
+   
+  </style>
 <div>
  <div style="position:relative; background-image:url('{% static 'img/1.jpg' %}');"></div>
   <div class="container">
