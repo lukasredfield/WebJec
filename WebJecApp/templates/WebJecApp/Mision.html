@@ -10,6 +10,8 @@
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="object-fit: cover;">
         <source src="{% static 'img/VIDEO ANIVERSARIO.mp4' %}" type="video/mp4">
     </video>
+    <div class="overlay2"></div>
+    <div class="text-overlay">Jesús es el camino</div>
   </div>
 </header>
 <style>
@@ -63,8 +65,14 @@
     transform: translateY(-50%);
   }
 }
-   
+
   </style>
+  <script>
+    var video = document.querySelector('.video-container video');
+    video.addEventListener('loadeddata', function() {
+      video.classList.add('loaded');
+    });
+  </script>
 <div>
  <div style="position:relative; background-image:url('{% static 'img/1.jpg' %}');"></div>
   <div class="container">
