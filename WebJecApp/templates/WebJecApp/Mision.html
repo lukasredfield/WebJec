@@ -4,17 +4,121 @@
 
 {% block content %}
 
-    <!-- Message -->
-    <section class="page-section cta" style="margin-bottom: 5em;" >
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-upper">Puntualidad</span>
-            <span class="section-heading-lower">El mejor stock</span>
-          </h2>
-          <p class="mb-3">En la puertra de tu casa en menos de 48 h con el envío normal. En menos de 24 h con el envío express.
-          </p>
-         
+ <header>
+  <!-- This div is intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="video-container">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="object-fit: cover;">
+        <source src="{% static 'img/VIDEO ANIVERSARIO.mp4' %}" type="video/mp4">
+    </video>
+    <div class="overlay2"></div>
+    <div class="text-overlay">Jesús es el camino</div>
+  </div>
+</header>
+
+</header>
+
+<style>
+/* Show the video in any screen size */
+.video-container {
+  position: relative;
+  height: calc(130vh - 55px); /* ajusta la altura del video */
+  overflow: hidden;
+}
+
+.video-container video {
+  display: block;
+  position: absolute;
+  top: -50px; /* Ajusta la posición vertical del video */
+  left: 0;
+  width: 100%;
+  height: calc(100% + 50px); /* Ajusta la altura del video */
+  object-fit: cover;
+  opacity: 0; /* Oculta el video al principio */
+  transition: opacity 0.5s ease-in-out; /* Agrega una transición de 0.5 segundos */
+}
+
+.video-container .overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 249, 249, 0.137);
+  z-index: 1; /* Asegurarse de que la capa del overlay esté sobre el video */
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+
+/* Change video size for smaller screens */
+@media only screen and (max-width: 768px) {
+  .video-container {
+    height: calc(100vw - 55px); /* Ajusta la altura del video */
+  }
+
+  .video-container video {
+    height: auto;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* Muestra el video gradualmente cuando se carga la página */
+.video-container video.loaded {
+  opacity: 1;
+}
+ 
+</style>
+<script>
+  var video = document.querySelector('.video-container video');
+  video.addEventListener('loadeddata', function() {
+    video.classList.add('loaded');
+  });
+</script>
+
+
+ <div style="position:relative; background-image:url('{% static 'img/1.jpg' %}');"></div>
+  <div class="container">
+    <br>
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <div class="container px-5">
+        <img src="{% static 'img/plateados1.png' %}" style="border-radius: 55%" alt="Responsive image">
+      </div>
+    </div>
+      <div class="col-md-8">
+        <div class="section-details">
+          <h2>Nuestra Misión</h2>
         </div>
-      </section>
+        <div class="section-details">
+          <p>
+            Glorificar a Dios siendo un instrumento santo 
+            para la extensión de su reino en Florencio Varela 
+            y hasta lo último de la tierra.
+            Ser una Iglesia del Reino,
+            Activa y atractiva,
+            Enamorada de Cristo,
+            Abierta a la comunidad,
+            Que comparte las buenas nuevas
+            Y que crece integralmente
+            para que todo Florencio Varela
+            conozca a Dios
+          </p>
+          <!--<a href="#" class="btn btn-learn-more">Leer más <i class="ion-ios-arrow-right"></i></a>
+        </div>-->
+      </div>
+    </div>
+  
+  </div>
+
+
 
 {% endblock %}
