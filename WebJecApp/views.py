@@ -12,9 +12,9 @@ def home(request):
 
     return render(request, 'WebJecApp/Home.html')
 
-def ministerios(request):
+def comunidad(request):
 
-    return render(request, 'WebJecApp/Ministerios.html')
+    return render(request, 'WebJecApp/Comunidad.html')
 
 def mision(request):
 

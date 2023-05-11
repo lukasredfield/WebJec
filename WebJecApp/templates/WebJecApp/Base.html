@@ -30,6 +30,9 @@
 
         <!-- Template Stylesheet -->
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        <!-- Cargar video mp4 de forma asíncrona -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
 
     </head>
@@ -50,7 +53,7 @@
               <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Mision' %}">&nbsp;&nbsp;Misión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Ministerios' %}">&nbsp;&nbsp;Comunidad</a>
+              <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Comunidad' %}">&nbsp;&nbsp;Comunidad</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" style="padding-inline-end: 20px; margin-right: 5px;" href="{% url 'Contacto' %}">&nbsp;&nbsp;Contacto</a>
