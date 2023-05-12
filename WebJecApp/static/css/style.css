@@ -674,13 +674,14 @@ button {
 }
 /** end about section **/
 
-/** our_room section **/
+/** our_room section (GALERÍA DE IMÁGENES) **/
 
 .our_room {
      background-color: #f4f5f7;
      padding: 60px 0 30px 0;
      margin-top: 90px;
 }
+
 
 .our_room .titlepage {
      text-align: center;
@@ -729,6 +730,8 @@ button {
      margin: auto;
 }
 
+
+
 #serv_hover:hover.room {
      cursor: pointer;
      box-shadow: 0px 0px 30px rgba(255, 9, 9, 0.15);
@@ -766,6 +769,7 @@ button {
 .gallery .gallery_img figure img:hover {
      transform: scale(1.2);
 }
+
 
 
 /** end gallery  section **/
