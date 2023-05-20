@@ -6,12 +6,20 @@
 <div class="alert-message" style="position:relative; background-image:url('{% static 'img/1.jpg' %}');">
     <div class="overlay"></div>
     <br><br><br><br>
-    {% if messages %}
+    {% if enviado %}
       {% for message in messages %}
         <div class="alert" style="color: rgb(156, 84, 16);">
           <strong>¡Mensaje enviado!</strong> Nos contactaremos a la brevedad. "Pidan, y se les dará; busquen, y encontrarán; llamen, y se les abrirá. Porque todo el que pide, recibe; el que busca, encuentra; y al que llama, se le abrirá. (Mateo 7:7-8)"
         </div>
       {% endfor %}
+      {% else %}
+      <div class="alert" style="color: rgb(156, 84, 16);">
+        <strong>No se ha podido enviar el mensaje...</strong> Te invitamos a que por el momento nos contactes por medio de nuestras redes sociales.
+        <ul class="social-network social-circle list-inline" style="padding-bottom: 20px;">
+          <li class="list-inline-item"><a href="https://www.instagram.com/iglesiajec/" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/comunidadwebjec" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.youtube.com/@ComunidadJec" class="icoYoutube" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+      </div>
     {% endif %}
     <div class="button-container">
         <a class="btn btn-send2" href="{% url 'Home' %}"><h4>Volver a la página principal</h4></a>
@@ -20,4 +28,5 @@
   </div>
   
 {% endblock %}
+
 
